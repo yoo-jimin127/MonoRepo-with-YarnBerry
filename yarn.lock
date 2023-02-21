@@ -526,6 +526,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@monorepo/common@*, @monorepo/common@workspace:package/common":
+  version: 0.0.0-use.local
+  resolution: "@monorepo/common@workspace:package/common"
+  languageName: unknown
+  linkType: soft
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1314,6 +1320,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "front-mono@workspace:package/front-mono"
   dependencies:
+    "@monorepo/common": "*"
     "@types/react": ^18.0.27
     "@types/react-dom": ^18.0.10
     "@vitejs/plugin-react": ^3.1.0

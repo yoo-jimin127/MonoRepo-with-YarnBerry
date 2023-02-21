@@ -16,6 +16,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."\
       },\
       {\
+        "name": "@monorepo/common",\
+        "reference": "workspace:package/common"\
+      },\
+      {\
         "name": "front-mono",\
         "reference": "workspace:package/front-mono"\
       }\
@@ -23,6 +27,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
+      ["@monorepo/common", ["workspace:package/common"]],\
       ["front-mono", ["workspace:package/front-mono"]],\
       ["monorepo", ["workspace:."]]\
     ],\
@@ -682,6 +687,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jridgewell/sourcemap-codec", "npm:1.4.14"]\
           ],\
           "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@monorepo/common", [\
+        ["workspace:package/common", {\
+          "packageLocation": "./package/common/",\
+          "packageDependencies": [\
+            ["@monorepo/common", "workspace:package/common"]\
+          ],\
+          "linkType": "SOFT"\
         }]\
       ]],\
       ["@nodelib/fs.scandir", [\
@@ -1564,6 +1578,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./package/front-mono/",\
           "packageDependencies": [\
             ["front-mono", "workspace:package/front-mono"],\
+            ["@monorepo/common", "workspace:package/common"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-dom", "npm:18.0.11"],\
             ["@vitejs/plugin-react", "virtual:32202b3de62e91bd2f6f3ed178214fa878622022853f5fea408a9a04da7ac5666f940d5a5804ce1edc3e0b85fa55c80daf30b683acca8a6758859b9b1c0079a8#npm:3.1.0"],\
