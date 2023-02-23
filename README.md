@@ -248,6 +248,6 @@ function App() {
 
 <img src="https://user-images.githubusercontent.com/66112716/220810509-2084819a-3bc6-46d8-9b67-5cd0aac1b4ba.png" width="800" />
 
-프로젝트 간 코드의 공유가 자유롭게 이루어짐을 확인할 수 있다.   
+프로젝트 간 코드의 공유가 자유롭게 이루어짐을 확인할 수 있습니다.   
 
 - 참고 자료 : https://minify.tistory.com/40
